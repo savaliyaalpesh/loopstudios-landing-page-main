@@ -1,0 +1,588 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+  --Primary: hsl(0, 0%, 100%);
+  --Secondary: blueviolet;
+}
+
+/*========================menu mobile================================*/
+.menu-mobile{
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.685);
+    z-index: 1000;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.logo-x{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+
+#x{
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    color: var(--Primary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-links{
+    padding: 30px;
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+.mobile-menu-links li{
+    font-weight: 300;
+    padding-top: 30px;
+}
+
+.mobile-menu-links a:hover{
+    color: var(--Secondary);
+}
+
+.mobile-menu-links a{
+    color: var(--Primary);
+    text-decoration: none;
+}
+
+.menu-on{
+    display: block;
+    height: 100vh;
+}
+/*========================menu mobile================================*/
+
+
+/*======================== Header =============================*/
+
+header{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.445), transparent);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    font-size: 1.2rem;
+}
+
+.header-links{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.header-links li::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--Primary);
+    transition: .3s;
+}
+
+.header-links li:hover::after{
+    width: 100%;
+}
+
+.header-links a{
+    text-decoration: none;
+    color: var(--Primary);
+    transition: color .3s ease;
+}
+
+#menu{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 2.5rem;
+    color: var(--Primary);
+    transition: .3s;
+}
+
+#menu:hover{
+    color: var(--Secondary);
+}
+
+/*======================== Header =============================*/
+
+
+
+
+
+/*========================   Main  =============================*/
+#main{
+    background-image: url(images/desktop/image-hero2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+main{
+    height: 670px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 270px;
+}
+
+main h1{
+    font-weight: 300;
+}
+
+.main-darker{
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.main-txt-wrapper{
+    border: 3px solid var(--Primary);
+    font-size: 2.5rem;
+    color: var(--Primary);
+    text-transform: uppercase;
+    padding: 30px;
+    width: 650px;
+    margin-right: 50%;
+    white-space: nowrap;
+}
+/*========================   Main  =============================*/
+
+/*==========================  VR  =============================*/
+#vr{
+    padding: 60px 0px;
+}
+
+
+.vr-img{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.vr-text{
+    height: auto;
+    width: 400px;
+    background-color: var(--Primary);
+    padding: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+.vr-text h1{
+    font-weight: 300;
+    font-size: 3.3rem;
+}
+
+.vr-text p{
+    color: hsl(0, 0%, 45%);
+    padding-top: 10px;
+}
+
+/*==========================  VR  =============================*/
+
+/*======================  Creations ===========================*/
+
+#creations{
+    padding-bottom: 100px;
+}
+
+.creations-title{
+    display: flex;
+    justify-content: space-around;
+}
+
+.creations-title h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.creations-seeAll-btn{
+    width: 150px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    background-color: var(--Primary);
+    border: 2px solid black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.creations-seeAll-btn:hover{
+    color: var(--Primary);
+    background-color: hsl(0, 0%, 0%);
+}
+
+.btn-mobile-container{
+    display: none;
+}
+
+/*======================  Creations ===========================*/
+
+/*=========================  Cards ===========================*/
+
+.desk-cards{
+    display: flex;
+    gap: 30px;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.desk-card{
+    height: 370px;
+    width: 210px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--Primary);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+}
+
+.card-txt{
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.541));
+    width: 100%;
+    padding: 20px;
+}
+
+.desk-card h1{
+    font-weight: 300;
+    width: 150px;
+    font-size: 1.8rem;
+    text-shadow: 0px 0px 1px black;
+    transition: .3s;
+}
+
+.card-earth{
+    background-image: url(images/desktop/image-deep-earth.jpg);
+}
+
+.card-arcade{
+    background-image: url(images/desktop/image-night-arcade.jpg);
+}
+
+.card-soccer{
+    background-image: url(images/desktop/image-soccer-team.jpg);
+}
+
+.card-grid{
+    background-image: url(images/desktop/image-grid.jpg);
+}
+
+.card-above{
+    background-image: url(images/desktop/image-from-above.jpg);
+}
+
+.card-borealis{
+    background-image: url(images/desktop/image-pocket-borealis.jpg);
+}
+
+.card-curiosity{
+    background-image: url(images/desktop/image-curiosity.jpg);
+}
+
+.card-fisheye{
+    background-image: url(images/desktop/image-fisheye.jpg);
+}
+
+.cardbg{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    transition: .3s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.cardbg:hover{
+    background-color: rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(2px);
+}
+
+
+/*=========================  Cards ===========================*/
+
+/*========================= Footer ===========================*/
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--Primary);
+    gap: 50px;
+    padding: 30px 0px;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-links{
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    padding: 40px 0px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: var(--Primary);
+}
+
+.footer-links li::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--Primary);
+    transition: .2s ease-in-out;
+}
+
+.footer-links li:hover::after{
+    width: 100%;
+}
+
+
+.socials{
+    display: flex;
+    gap: 20px;
+}
+
+.copy{
+    padding: 50px 0px;
+    color: rgb(179, 179, 179);
+}
+
+.footer-icon{
+    cursor: pointer;
+    border-bottom: none;
+    transition: .3s;
+}
+
+.footer-icon:hover{
+    transform: rotateZ(30deg);
+}
+
+.social-icons{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.social-icons li::after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: var(--Secondary);
+    transition: .3s;
+}
+
+.social-icons li:hover::after{
+    width: 100%;
+}
+
+
+/*========================= Footer ===========================*/
+
+
+
+
+@media (max-width: 780px){
+/*======================== Header =============================*/
+
+    header{
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+
+    #main{
+        background-image: url(./images/mobile/image-hero.jpg);
+    }
+
+    .header-links{
+        display: none;
+    }
+
+    #menu{
+        display: block;
+    }
+
+/*======================== Header =============================*/
+
+/*========================   Main  =============================*/
+    main{
+        padding-left: 0;
+        padding: 10px;
+        height: 460px;
+    }
+
+    .main-txt-wrapper{
+        margin-right: 0;
+        padding: 20px;
+        width: 80%;
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    .main-txt-wrapper h1{
+        font-size: 2.3rem;
+        text-align: center;
+        padding-top: 10px;
+    }
+/*========================   Main  =============================*/
+
+}
+
+@media(max-width: 1015px){
+    #vr{
+        padding: 0;
+    }
+    .vr-img{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .vr-img img{
+        width: 100%;
+    }
+    .vr-text{
+        position: relative;
+        width: auto;
+    }
+    
+}
+
+@media(max-width: 940px){
+    .desk-cards{
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .desk-card{
+        height: 250px;
+        width: 90%;
+        background-size: cover;
+        background-position: 80%;
+        overflow: hidden;
+        transition: .4s;
+    }
+
+    .card-txt{
+        background: none;
+    }
+
+    .card-earth{
+        background-image: url(images/mobile/image-deep-earth.jpg);
+    }
+    
+    .card-arcade{
+        background-image: url(images/mobile//image-night-arcade.jpg);
+    }
+    
+    .card-soccer{
+        background-image: url(images/mobile//image-soccer-team.jpg);
+    }
+    
+    .card-grid{
+        background-image: url(images/mobile//image-grid.jpg);
+    }
+    
+    .card-above{
+        background-image: url(images/mobile//image-from-above.jpg);
+    }
+    
+    .card-borealis{
+        background-image: url(images/mobile//image-pocket-borealis.jpg);
+    }
+    
+    .card-curiosity{
+        background-image: url(images/mobile//image-curiosity.jpg);
+    }
+    
+    .card-fisheye{
+        background-image: url(images/mobile//image-fisheye.jpg);
+    }
+
+    .desk-card:hover h1{
+        color: violet;
+    }
+
+    .desk-card:hover .cardbg{
+        opacity: 100%;
+    }
+
+    .desk-card:hover{
+        background-position: 60%;
+    }
+
+    .card-txt::before{
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100px;
+        background-color: var(--Secondary);
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+    #btn-desc-desk{
+        display: none;
+    }
+
+    .btn-mobile-container{
+        padding-top: 30px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #btn-desc-mob{
+        height: 40px;
+    }
+
+    
+
+}
+
+@media(max-width: 810px){
+    footer, .footer-links{
+        flex-direction: column;
+        text-align: center  ;
+    }
+
+    .footer-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
